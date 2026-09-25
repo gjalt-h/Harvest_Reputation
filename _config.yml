@@ -1,0 +1,7 @@
+title: "Field Notes / Thesis Experiments"
+description: "An interactive archive of visual experiments"
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: pretty
+plugins: []
