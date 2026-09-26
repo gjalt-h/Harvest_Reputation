@@ -12,29 +12,47 @@ These GIFs are sampled from the independent baseline seed 0 run at the following
 
 plots of reward and peace
 
-GIF peak 1
+<details>
+<summary>GIF peak 1</summary>
+
 ![Individual Baseline - peak 1](gifs/baseline/ind_peak_1.gif)
-description
 
-GIF tragedy
+description
+</details>
+
+<details>
+<summary>GIF tragedy</summary>
+
 ![Individual Baseline - tragedy](gifs/baseline/ind_bottom.gif)
-description
 
-GIF recovery
+description
+</details>
+
+<details>
+<summary>GIF recovery</summary>
+
 ![Individual Baseline - peak 2](gifs/baseline/ind_peak_2.gif)
+
 description
+</details>
 
-...
+<details>
+<summary>GIF end</summary>
 
-GIF end
 ![Individual Baseline - end](gifs/baseline/ind_end.gif)
+
 description
+</details>
 
 ## Shared Baseline
 
 The following GIF illustrates the behavior learned through optimizing a shared reward function.
 This GIF is sampled from the shared baseline seed 0 run at the final checkpoint.
 
-GIF
+<details>
+<summary>GIF</summary>
+
 ![Shared Baseline - end](gifs/baseline/sh_end.gif)
+
 description
+</details>
