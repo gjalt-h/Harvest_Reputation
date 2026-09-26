@@ -1,45 +1,35 @@
-# Field Notes — Jekyll thesis website
+# Harvest Reputation experiments
 
-A responsive, academic-style GitHub Pages template for presenting visual experiments. It uses standard Jekyll, Liquid, CSS, and a small amount of dependency-free JavaScript.
+This GitHub README contains additional materials regarding the reputation system experiments conducted in the Harvest Open environment.
+For reading please view "Master Thesis: ...". The code used to run the experiments can be found in "Code". 
+Below you can find visualizations of multiple key dynamics observations through GIFs. These GIFs are no results on their own, but are meant to give a clearer idea of the concepts and patterns described in the Thesis. Several key findings have been uncovered during the research by looking closely at these GIFs. This is a selection of experimental GIFs that have provided notable insights with a short description.
+Hopefully this page will enhance your understanding of the research whilst further sparking your interest into the fascinating multi agent behaviors.
 
-## Run locally
+## Independent Baseline
 
-1. Install Ruby and Bundler, then run `bundle install`.
-2. Start the development server: `bundle exec jekyll serve --livereload`.
-3. Open `http://localhost:4000`.
+Firstly, to properly understand how individually optimizing agents behave throughout the learning trajectory we have the following GIFs illustrating 3 key stages in the learning curve _naivety, tragedy_ and _maturity_.
+These GIFs are sampled from the independent baseline seed 0 run at the following points in the reward curve to visualize the key stages of the tragedy.
 
-To validate a production build without a server, run `bundle exec jekyll build`. The generated site will be in `_site/`.
+plots of reward and peace
 
-## Publish on GitHub Pages
+GIF peak 1
+description
 
-1. Create a repository named `username.github.io` (or use a project repository).
-2. Copy the contents of this folder into the repository.
-3. In **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/ (root)`.
-4. For a project repository, set `baseurl: "/repository-name"` in `_config.yml`; leave it empty for a user site.
+GIF tragedy
+description
 
-GitHub Pages will build the site with Jekyll. The included `Gemfile` is useful for matching the local Jekyll version; no plugins are required.
+GIF recovery
+description
 
-## Replace the sample GIFs
+...
 
-Sample files live in `assets/img/` and are intentionally lightweight placeholders. Replace each `.gif` with your own animated GIF, keeping the filename, or update the `gif` field in `_data/experiments.yml`. Add a still poster image (`.png` or `.jpg`) and update the matching `poster` field. Posters are shown when a visitor presses **Pause loop**, because browsers do not provide a native way to pause an animated GIF in an `<img>` element.
+GIF end
+description
 
-Recommended: export a web-optimized GIF under 3–5 MB, with a clear first frame. The image `alt` field in the data file becomes its accessible description.
+## Shared Baseline
 
-## Add a new experiment
+The following GIF illustrates the behavior learned through optimizing a shared reward function.
+This GIF is sampled from the shared baseline seed 0 run at the final checkpoint.
 
-1. Add a new entry to `_data/experiments.yml` using the existing fields:
-   - `number`, `tag`, `year`, `title`, `description`
-   - `visible`, `gif`, `poster`, `alt`, `loop`
-   - `focus_default` (`context`, `transition`, or `detail`) and `focus_value` (0–100)
-2. Place the GIF and poster in `assets/img/`.
-3. Rebuild or refresh the local server. The card is generated automatically by the Liquid loop in `index.md`.
-
-The range control changes the focus label and emphasizes one of the two numbered visual prompts. The play button swaps between the animated GIF and its poster; this keeps the interaction portable and backend-free.
-
-## Customization map
-
-- `_config.yml`: site title, description, and GitHub Pages `baseurl`.
-- `_data/experiments.yml`: experiment content and media filenames.
-- `assets/css/site.css`: colors, typography, grid, and responsive rules.
-- `assets/js/site.js`: play/pause and focus-window behavior.
-- `_layouts/default.html`: shared header/footer shell.
+GIF
+description
