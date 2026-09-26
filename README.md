@@ -17,14 +17,17 @@ GIF peak 1
 description
 
 GIF tragedy
+![Individual Baseline - tragedy](gifs/baseline/ind_bottom.gif)
 description
 
 GIF recovery
+![Individual Baseline - peak 2](gifs/baseline/ind_peak_2.gif)
 description
 
 ...
 
 GIF end
+![Individual Baseline - end](gifs/baseline/ind_end.gif)
 description
 
 ## Shared Baseline
@@ -33,4 +36,5 @@ The following GIF illustrates the behavior learned through optimizing a shared r
 This GIF is sampled from the shared baseline seed 0 run at the final checkpoint.
 
 GIF
+![Shared Baseline - end](gifs/baseline/sh_end.gif)
 description
