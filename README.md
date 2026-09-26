@@ -13,6 +13,7 @@ These GIFs are sampled from the independent baseline seed 0 run at the following
 plots of reward and peace
 
 GIF peak 1
+![Individual Baseline - peak 1](gifs/baseline/ind_peak_1.gif)
 description
 
 GIF tragedy
