@@ -15,7 +15,7 @@ These GIFs are sampled from the independent baseline seed 0 run at the following
 ![Independent baseline - reward and peace landmarks](gifs/baseline/indep_s0_50m_reward_peace_gif_landmarks.png)
 
 <details>
-<summary>**GIF peak 1**</summary>
+<summary><b>GIF peak 1</b></summary>
 
 ![Individual Baseline - peak 1](gifs/baseline/ind_peak_1.gif)
 
@@ -23,7 +23,7 @@ Harvesting behavior during the first 250 frames of a 1000 frame episode at the f
 </details>
 
 <details>
-<summary>**GIF tragedy**</summary>
+<summary><b>GIF tragedy</b></summary>
 
 ![Individual Baseline - tragedy](gifs/baseline/ind_bottom.gif)
 
@@ -31,7 +31,7 @@ Harvesting behavior during the first 250 frames of a 1000 frame episode at the l
 </details>
 
 <details>
-<summary>**GIF recovery**</summary>
+<summary><b>GIF recovery</b></summary>
 
 ![Individual Baseline - peak 2](gifs/baseline/ind_peak_2.gif)
 
@@ -39,7 +39,7 @@ Harvesting behavior during the first 250 frames of a 1000 frame episode at the s
 </details>
 
 <details>
-<summary>**GIF end**</summary>
+<summary><b>GIF end</b></summary>
 
 ![Individual Baseline - end](gifs/baseline/ind_end.gif)
 
@@ -52,7 +52,7 @@ The following GIF illustrates the behavior learned through optimizing a shared r
 This GIF is sampled from the shared baseline seed 0 run at the final checkpoint.
 
 <details>
-<summary>**GIF end**</summary>
+<summary><b>GIF</b></summary>
 
 ![Shared Baseline - end](gifs/baseline/sh_end.gif)
 
@@ -64,18 +64,18 @@ The following GIFs focus on the implementation of the reputation systems. Good a
 
 ### Strict enforcement
 <details>
-<summary>**GIF end**</summary>
+<summary><b>GIF</b></summary>
 
-![Shared Baseline - end](gifs/enforcement/enf_period1_goodbad.gif)
+![Direct enforcement - end](gifs/enforcement/enf_period1_goodbad.gif)
 
 Harvesting behavior during the first 500 frames of a 1000 frame episode at the end of training (after 50k episodes) enforced strictly through a direct timeout for Bad agents. The agents follow the reputation system near perfectly. The enforcement system has to kick in only seldomly. This means agents do not zap each other and harvest efficiently at a rate that does not deplete the orchard. 
 </details>
 
 ### Police enforcement
 <details>
-<summary>**GIF end**</summary>
+<summary><b>GIF</b></summary>
 
-![Shared Baseline - end](gifs/enforcement/police1_goodbad.gif)
+![Police enforcement - end](gifs/enforcement/police1_goodbad.gif)
 
 Harvesting behavior during the first 500 frames of a 1000 frame episode at the end of training (after 50k episodes) enforced through a learning police agent. The agents follow the reputation system quite well. As an agent becomes Bad, the police agent tracks it down and zaps it effectively. The orchard is not close to depletion, but a local patch might get barren.
 
@@ -85,21 +85,37 @@ Note on harvesting behavior. The majority of agents seem to harvest according to
 </details>
 
 ## Tier 3. Self-supported
+The last tier aims to let agents learn sustainable harvesting through the reputation system without external enforcers.
 
 ### Peer reward
 <details>
-<summary>**GIF end**</summary>
+<summary><b>GIF</b></summary>
 
-![Shared Baseline - end](gifs/self-supported/peer_br5_g5_goodbad.gif)
+![Peer reward - end](gifs/self-supported/peer_br5_g5_goodbad.gif)
 
-description
+Harvesting behavior during the first 500 frames of a 1000 frame episode at the end of training (after 50k episodes) with a peer reward system. Zapping Bad agents is rewarded with 5, zapping Good punished with -5 direct signal. Good agents do not seem able to effectively target Bad agents. They get zapped themselves, or become Bad rather quickly.
+
 </details>
 
 ### Peer reward + Good immunity
 <details>
-<summary>**GIF end**</summary>
+<summary><b>GIF</b></summary>
 
-![Shared Baseline - end](gifs/self-supported/peer_br5_gimm_goodbad.gif)
+![Peer reward + immunity - end](gifs/self-supported/peer_br5_gimm_goodbad.gif)
 
-description
+Harvesting behavior during the first 500 frames of a 1000 frame episode at the end of training (after 50k episodes) with a peer reward + immunity system. Zapping Bad agents is rewarded with 5, Good agents cannot get zapped. Good agents seem to survive longer and target Bad agents. Zapping does seem fairly random, not very efficient. Harvesting behavior does significantly improve.
+
+</details>
+
+## Tier 4. Tweaked learning parameters
+After observing the previous Tier's peer reward GIFs, we tweaked the learning parameters for improved targeting.
+
+### Peer reward
+<details>
+<summary><b>GIF</b></summary>
+
+![Peer reward - end](gifs/self-supported/peer_br5_g5_goodbad.gif)
+
+Harvesting behavior during the first 500 frames of a 1000 frame episode at the end of training (after 50k episodes) with a peer reward system. Zapping Bad agents is rewarded with 5, zapping Good punished with -5 direct signal. Good agents do not seem able to effectively target Bad agents. They get zapped themselves, or become Bad rather quickly.
+
 </details>
