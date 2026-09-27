@@ -112,10 +112,19 @@ After observing the previous Tier's peer reward GIFs, we tweaked the learning pa
 
 ### Peer reward
 <details>
-<summary><b>GIF</b></summary>
+<summary><b>GIF at 50k episodes</b></summary>
 
-![Peer reward - end](gifs/self-supported/peer_br5_g5_goodbad.gif)
+![Peer reward - end](gifs/self-supported/floor0005_u520_goodbad.gif)
 
-Harvesting behavior during the first 500 frames of a 1000 frame episode at the end of training (after 50k episodes) with a peer reward system. Zapping Bad agents is rewarded with 5, zapping Good punished with -5 direct signal. Good agents do not seem able to effectively target Bad agents. They get zapped themselves, or become Bad rather quickly.
+Harvesting behavior during the first 500 frames of a 1000 frame episode after 50k episodes with a peer reward system. Zapping Bad agents is rewarded with 5, zapping Good punished with -5 direct signal. Good agents are quite able to effectively target Bad agents. They do get zapped themselves, or become Bad by zapping a Good agent by accident.
+
+</details>
+
+<details>
+<summary><b>GIF at 100k episodes</b></summary>
+
+![Peer reward - end](gifs/self-supported/peer_br5_g5_floor0005_u1040_goodbad.gif)
+
+Harvesting behavior during the first 500 frames of a 1000 frame episode after 100k episodes with a peer reward system. Zapping Bad agents is rewarded with 5, zapping Good punished with -5 direct signal. Good agents are able to effectively target Bad agents. They do get zapped themselves, or become Bad by zapping a Good agent by accident, resulting in occasional free space for Bad exploit.
 
 </details>
